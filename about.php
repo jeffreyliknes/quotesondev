@@ -1,8 +1,9 @@
 <?php
 /**
- * The template for displaying all single posts.
+ * The template for displaying the About page.
  *
  * @package QOD_Starter_Theme
+ * Template Name: About Page Template
  */
 
 get_header(); ?>

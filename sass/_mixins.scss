@@ -3,4 +3,13 @@
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	
+}
+
+@mixin tablet {
+	max-width: 600px;
+}
+
+@mixin desktop {
+	max-width: 1080px;
 }

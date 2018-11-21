@@ -1,0 +1,53 @@
+html {
+  padding: 5%;
+}
+
+a {
+    color: #0c0;
+    text-decoration: none;
+    &:hover {
+       color: darken($color__link, 10%);
+    }
+}
+
+
+body {
+  background-color: $color__background;
+  color: white;
+  font-family: $fontface__main;
+  button {
+    font-family: $fontface__main;
+  }
+  a {
+    font-family: $fontface__main;
+  }
+}
+
+.site {
+  @include container-block;
+}
+
+button {
+  border-radius: 3px;
+  color: $color__link;
+  background-color: #222;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 15px 40px;
+  border: solid 1px $color__link;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  &:hover {
+    border-radius: 3px;
+    color: darken($color__link, 10%);
+    background-color: #222;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 15px 40px;
+    border: solid 1px darken($color__link, 10%);
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+
+

@@ -1,0 +1,20 @@
+.main-navigation {
+    @include container-block;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+}
+
+
+
+   .site-info {
+       display: block;
+       .main-navigation {
+           display: flex;
+           flex-wrap: wrap;
+       }
+
+   }
+
+  
+
+
