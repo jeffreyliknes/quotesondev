@@ -2,4 +2,16 @@
 
 .site-header {
     margin: 3rem 0 1rem 0;
+    img {
+        width: 300px;
+        height: auto;
+        @include tablet {
+            width: 500px;
+
+        }
+        @include desktop {
+            width: 700px;
+        }
+    }
 }
+

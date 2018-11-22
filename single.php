@@ -14,7 +14,7 @@ get_header(); ?>
 
 		<button type="button" id="close-comments">Close Comments</button>
 
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
+			<?php get_template_part( 'template-parts/content'); ?>
 
 			<?php the_post_navigation(); ?>
 

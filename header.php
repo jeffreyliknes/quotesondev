@@ -33,5 +33,7 @@
 
 				
 			</header><!-- #masthead -->
-
+			<i class="fas fa-quote-left"></i>
+			<i class="fas fa-quote-right"></i>
 			<div id="content" class="site-content">
+			

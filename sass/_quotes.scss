@@ -1,0 +1,26 @@
+.fa-quote-left {
+  display: none;
+}
+
+@include desktop {
+  .site {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 600px;
+    .fa-quote-left {
+      color: $color__link;
+      position: absolute;
+      font-size: 125px;
+      left: -150px;
+      top: 175px;
+    }
+    .fa-quote-right {
+      color: $color__link;
+      position: absolute;
+      right: -150px;
+      font-size: 125px;
+      top: 175px;
+    }
+  }
+}

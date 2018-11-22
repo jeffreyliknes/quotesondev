@@ -4,7 +4,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 1rem;
+  // font-size: 1rem;
 }
 
 *,
@@ -14,60 +14,57 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  // background: $color__background-body; /* Fallback for when there is no custom background color defined. */
-}
 
-blockquote,
-q {
-  quotes: '' '';
+// blockquote,
+// q {
+//   quotes: '' '';
 
-  &:before,
-  &:after {
-    content: '';
-  }
-}
+//   &:before,
+//   &:after {
+//     content: '';
+//   }
+// }
 
-hr {
-  // background-color: $color__background-hr;
-  border: 0;
-  height: 1px;
-  margin-bottom: $base__space-unit;
-}
+// hr {
+  
+//   border: 0;
+//   height: 1px;
+//   margin-bottom: $base__space-unit;
+// }
 
-ul,
-ol {
-  margin: 0 0 $base__space-unit ($base__space-unit * 2);
-}
+// ul,
+// ol {
+//   margin: 0 0 $base__space-unit ($base__space-unit * 2);
+// }
 
-ul {
-  list-style: disc;
-}
+// ul {
+//   list-style: disc;
+// }
 
-ol {
-  list-style: decimal;
-}
+// ol {
+//   list-style: decimal;
+// }
 
-li > ul,
-li > ol {
-  margin-bottom: 0;
-  margin-left: $base__space-unit;
-}
+// li > ul,
+// li > ol {
+//   margin-bottom: 0;
+//   margin-left: $base__space-unit;
+// }
 
-dt {
-  font-weight: bold;
-}
+// dt {
+//   font-weight: bold;
+// }
 
-dd {
-  margin: 0 $base__space-unit $base__space-unit;
-}
+// dd {
+//   margin: 0 $base__space-unit $base__space-unit;
+// }
 
-img {
-  height: auto; /* Make sure images are scaled correctly. */
-  max-width: 100%; /* Adhere to container width. */
-}
+// img {
+//   height: auto; /* Make sure images are scaled correctly. */
+//   max-width: 100%; /* Adhere to container width. */
+// }
 
-table {
-  margin: 0 0 $base__space-unit;
-  width: 100%;
-}
+// table {
+//   margin: 0 0 $base__space-unit;
+//   width: 100%;
+// }

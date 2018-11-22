@@ -3,13 +3,46 @@
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	
+
 }
+
+@mixin body {
+  body {
+    background-color: $color__background;
+    color: $color__mainfont;
+    font-family: $fontface__main;
+    font-size: 1.25;
+    button {
+      font-family: $fontface__main;
+    }
+  }
+}
+
+@mixin anchor {
+  font-family: "exo", sans-serif;
+  font-weight: 100;
+  text-decoration: none;
+  color: $color__link;
+  line-height: 1.5;
+  &:hover {
+    color: darken($color__link, 10%);
+  }
+}
+
+$tablet-width: 600px;
+
+$desktop-width: 1080px;
+
 
 @mixin tablet {
-	max-width: 600px;
-}
+    @media (min-width: $tablet-width) {
+      @content;
+    }
+  }
 
+  
 @mixin desktop {
-	max-width: 1080px;
+  @media (min-width: $desktop-width) {
+    @content;
+  }
 }

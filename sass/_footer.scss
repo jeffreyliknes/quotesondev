@@ -1,20 +1,40 @@
+
+
+
+
+
+
+
 .main-navigation {
-    @include container-block;
-    padding-top: 6rem;
-    padding-bottom: 4rem;
+  @include container-block;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
 }
 
-
-
-   .site-info {
-       display: block;
-       .main-navigation {
-           display: flex;
-           flex-wrap: wrap;
-       }
-
-   }
-
-  
-
+.site-info {
+  display: block;
+  .main-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    .menu {
+        margin-bottom: 1rem;
+      ul {
+        li {
+          padding: 0 1rem;
+          border-right: solid 1px white;
+          &:first-child {
+            padding-left: 0;
+        }
+        }
+      }
+    }
+    p {
+      padding-left: 0;
+     
+          
+      }
+     
+    }
+    
+  }
 

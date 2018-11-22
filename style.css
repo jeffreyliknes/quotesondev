@@ -266,9 +266,6 @@ h1, h2, h3, h4, h5, h6 {
   clear: both; }
 
 /* Copy */
-p {
-  margin-bottom: 1.5rem; }
-
 dfn, cite, em, i {
   font-style: italic; }
 
@@ -304,8 +301,7 @@ big {
 --------------------------------------------------------------*/
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 1rem; }
+          box-sizing: border-box; }
 
 *,
 *:before,
@@ -313,50 +309,6 @@ html {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
-
-blockquote,
-q {
-  quotes: '' ''; }
-  blockquote:before, blockquote:after,
-  q:before,
-  q:after {
-    content: ''; }
-
-hr {
-  border: 0;
-  height: 1px;
-  margin-bottom: 1.5rem; }
-
-ul,
-ol {
-  margin: 0 0 1.5rem 3rem; }
-
-ul {
-  list-style: disc; }
-
-ol {
-  list-style: decimal; }
-
-li > ul,
-li > ol {
-  margin-bottom: 0;
-  margin-left: 1.5rem; }
-
-dt {
-  font-weight: bold; }
-
-dd {
-  margin: 0 1.5rem 1.5rem; }
-
-img {
-  height: auto;
-  /* Make sure images are scaled correctly. */
-  max-width: 100%;
-  /* Adhere to container width. */ }
-
-table {
-  margin: 0 0 1.5rem;
-  width: 100%; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -424,8 +376,14 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
+.main-navigation a {
+  font-weight: 100; }
+
 .main-navigation p {
-  margin: 0; }
+  font-weight: 100; }
+
+.main-navigation p {
+  margin-top: 0; }
 
 .main-navigation .menu .nav-menu {
   display: -webkit-box;
@@ -551,24 +509,38 @@ object {
 /* Submit a Quote Page */
 .site-header {
   margin: 3rem 0 1rem 0; }
+  .site-header img {
+    width: 300px;
+    height: auto; }
+    @media (min-width: 600px) {
+      .site-header img {
+        width: 500px; } }
+    @media (min-width: 1080px) {
+      .site-header img {
+        width: 700px; } }
 
 html {
   padding: 5%; }
 
 a {
+  font-family: "exo", sans-serif;
+  font-weight: 100;
+  text-decoration: none;
   color: #0c0;
-  text-decoration: none; }
+  line-height: 1.5; }
   a:hover {
     color: #009900; }
 
 body {
   background-color: #222;
-  color: white;
-  font-family: "exo", sans-serif; }
+  color: #fff;
+  font-family: "exo", sans-serif;
+  font-size: 1.25; }
   body button {
     font-family: "exo", sans-serif; }
-  body a {
-    font-family: "exo", sans-serif; }
+  body h1,
+  body h2 {
+    font-weight: 400; }
 
 .site {
   max-width: 1080px;
@@ -582,8 +554,8 @@ button {
   -webkit-box-shadow: none;
           box-shadow: none;
   text-shadow: none;
-  padding: 15px 40px;
-  border: solid 1px #0c0;
+  padding: 7px 35px;
+  border: solid 2px #0c0;
   font-size: 1.2rem;
   line-height: 1.5; }
   button:hover {
@@ -598,12 +570,37 @@ button {
     font-size: 1.2rem;
     line-height: 1.5; }
 
+.entry-content p {
+  font-size: 1.25rem;
+  font-weight: 100;
+  padding-top: 1rem; }
+  @media (min-width: 600px) {
+    .entry-content p {
+      font-size: 1.75rem; } }
+  @media (min-width: 1080px) {
+    .entry-content p {
+      font-size: 2.5rem; } }
+
+.entry-meta {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1; }
+  .entry-meta h2 {
+    display: inline;
+    margin: 0;
+    font-size: 1.25rem; }
+  .entry-meta a {
+    line-height: 1;
+    font-size: 1.25rem;
+    font-style: italic; }
+
 .main-navigation {
   max-width: 1080px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 6rem;
-  padding-bottom: 4rem; }
+  padding-bottom: 3rem; }
 
 .site-info {
   display: block; }
@@ -613,3 +610,52 @@ button {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
+    .site-info .main-navigation .menu {
+      margin-bottom: 1rem; }
+      .site-info .main-navigation .menu ul li {
+        padding: 0 1rem;
+        border-right: solid 1px white; }
+        .site-info .main-navigation .menu ul li:first-child {
+          padding-left: 0; }
+    .site-info .main-navigation p {
+      padding-left: 0; }
+
+.fa-quote-left {
+  display: none; }
+
+@media (min-width: 1080px) {
+  .site {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 600px; }
+    .site .fa-quote-left {
+      color: #0c0;
+      position: absolute;
+      font-size: 125px;
+      left: -150px;
+      top: 175px; }
+    .site .fa-quote-right {
+      color: #0c0;
+      position: absolute;
+      right: -150px;
+      font-size: 125px;
+      top: 175px; } }
+
+.post-archives, .category-archives, .tag-archives {
+  margin-right: auto;
+  margin-left: auto; }
+  .post-archives ul, .category-archives ul, .tag-archives ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .post-archives ul li, .category-archives ul li, .tag-archives ul li {
+      margin: 0 1rem 0.5rem 0; }
+
+.mr-smiley {
+  width: 15px; }
