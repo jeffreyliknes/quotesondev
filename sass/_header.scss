@@ -5,12 +5,15 @@
     img {
         width: 300px;
         height: auto;
+        
         @include tablet {
             width: 500px;
 
         }
         @include desktop {
             width: 700px;
+            position: relative;
+            left: -50px;
         }
     }
 }

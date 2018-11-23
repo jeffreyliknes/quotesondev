@@ -30,6 +30,9 @@
     }
     p {
       padding-left: 0;
+      @include tablet {
+          padding-left: 1rem;
+      }
      
           
       }

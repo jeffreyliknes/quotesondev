@@ -19,6 +19,7 @@ get_header(); ?>
 
 
                 <div class="quote-submission-wrapper">
+                    
                     <form name="quote-form" id="quote-submission-form">
                         <div>
                             <label for="quote-author">Author of Quote</label>

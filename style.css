@@ -382,6 +382,12 @@ textarea {
 .main-navigation p {
   font-weight: 100; }
 
+@media (min-width: 1080px) {
+  .main-navigation {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; } }
+
 .main-navigation p {
   margin-top: 0; }
 
@@ -517,7 +523,9 @@ object {
         width: 500px; } }
     @media (min-width: 1080px) {
       .site-header img {
-        width: 700px; } }
+        width: 700px;
+        position: relative;
+        left: -50px; } }
 
 html {
   padding: 5%; }
@@ -558,6 +566,10 @@ button {
   border: solid 2px #0c0;
   font-size: 1.2rem;
   line-height: 1.5; }
+  @media (min-width: 1080px) {
+    button {
+      position: relative;
+      left: 30%; } }
   button:hover {
     border-radius: 3px;
     color: #009900;
@@ -565,8 +577,7 @@ button {
     -webkit-box-shadow: none;
             box-shadow: none;
     text-shadow: none;
-    padding: 15px 40px;
-    border: solid 1px #009900;
+    border: solid 2px #009900;
     font-size: 1.2rem;
     line-height: 1.5; }
 
@@ -585,7 +596,8 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  line-height: 1; }
+  line-height: 1;
+  margin-bottom: 3rem; }
   .entry-meta h2 {
     display: inline;
     margin: 0;
@@ -619,6 +631,9 @@ button {
           padding-left: 0; }
     .site-info .main-navigation p {
       padding-left: 0; }
+      @media (min-width: 600px) {
+        .site-info .main-navigation p {
+          padding-left: 1rem; } }
 
 .fa-quote-left {
   display: none; }
@@ -633,12 +648,12 @@ button {
       color: #0c0;
       position: absolute;
       font-size: 125px;
-      left: -150px;
+      left: -230px;
       top: 175px; }
     .site .fa-quote-right {
       color: #0c0;
       position: absolute;
-      right: -150px;
+      right: -230px;
       font-size: 125px;
       top: 175px; } }
 
@@ -656,6 +671,14 @@ button {
         flex-wrap: wrap; }
     .post-archives ul li, .category-archives ul li, .tag-archives ul li {
       margin: 0 1rem 0.5rem 0; }
+
+.archive h1 {
+  border-bottom: 1px dashed #ffffff;
+  margin-bottom: 0;
+  padding-bottom: 2rem; }
+
+.archive article {
+  border-bottom: 1px dashed #ffffff; }
 
 .mr-smiley {
   width: 15px; }

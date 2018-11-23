@@ -14,3 +14,15 @@
 }
 
 
+.archive {
+  h1 {
+    border-bottom: $border__dash;
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+  }
+  article {
+    border-bottom: $border__dash;
+  }
+}
+
+

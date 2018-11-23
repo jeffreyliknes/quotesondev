@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts.
+ * The main template file.
  *
  * @package QOD_Starter_Theme
  */
@@ -10,15 +10,22 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+		<?php 
 
-		<button type="button" id="close-comments">Close Comments</button>
+			if( have_posts() ) :
+				while( have_posts() ): the_post();
 
-			<?php get_template_part( 'template-parts/content'); ?>
+				get_template_part( 'template-parts/content' );
 
-			<?php the_post_navigation(); ?>
+			endwhile;
+			
+		else:
 
-		<?php endwhile; // End of the loop. ?>
+			get_template_part( 'template-parts/content', 'none' );
+
+	endif; 
+	
+	?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
