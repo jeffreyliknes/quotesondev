@@ -22,20 +22,20 @@
           'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1'
       })
         .done(function(data) {
-          // append content to the DOM e.g. replace quote content with the rest api content
+          // append content to the DOM
           
 
           $(`.entry-content`).empty();
           $(`.entry-content`).append(data[0].content.rendered);
 
-          $(`.entry-meta`).empty();
-          $(`.entry-meta`).append(data[0].title.rendered);
+          $(`.entry-title`).empty();
+          $(`.entry-title`).text(data[0].title.rendered);
 
           $(`.source`).empty();
 
           if (data[0]._qod_quote_source_url.length > 0) {
               console.log("working");
-            $(`.source`).append(`<a href="${data[0]._qod_quote_source_url}">&nbsp;${data[0]._qod_quote_source}</a>`
+            $(`.source`).append(`,<a href="${data[0]._qod_quote_source_url}">&nbsp;${data[0]._qod_quote_source}</a>`
             );
           }
             else {
@@ -46,6 +46,7 @@
             const quote = data[0];
             console.log(quote.slug);
             // figure out the post slug
+
             history.pushState(null, null, qod_vars.home_url + '/' + quote.slug);
 
           
@@ -54,9 +55,6 @@
             $(`.content-area`).append("Sorry, something went wrong");
         //   throw err;
           
-
-
-          //Append a message for the user or alert a message saying something went wrong
         });
     }//end of get quote
 
@@ -68,7 +66,7 @@
     })
 
 
-//submit the form and 
+//submit the form
 
 $('#quote-submission-form').on('submit', function(event){
     event.preventDefault();
@@ -94,7 +92,7 @@ $('#quote-submission-form').on('submit', function(event){
                 content: quoteContent,               
                 _qod_quote_source: source,
                 _qod_quote_source_url: source_url,
-                
+                status: 'publish',
             },
             beforeSend: function(xhr) {
                 xhr.setRequestHeader( 'X-WP-Nonce', qod_vars.nonce );
@@ -114,6 +112,7 @@ $('#quote-submission-form').on('submit', function(event){
 
          }).fail(function(){
             console.log('something else');
+            $(".quote-submission").alert("Something went wrong, please try again")
 
 //output fail message
         });

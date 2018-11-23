@@ -75,10 +75,19 @@ button {
     display: inline;
     margin: 0;
     font-size: 1.25rem;
+    font-weight: 300;
   }
   a {
     line-height: 1;
     font-size: 1.25rem;
     font-style: italic;
   }
+}
+
+.source {
+    
+    a {
+        font-size: 1.25;
+        font-weight: 300;
+    }
 }
