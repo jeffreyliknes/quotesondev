@@ -22,8 +22,9 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/content', 'search' ); ?>
 
 			<?php endwhile; ?>
-
+			
 			<?php qod_numbered_pagination(); ?>
+			<!-- replace -->
 
 		<?php else : ?>
 

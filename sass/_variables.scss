@@ -1,6 +1,7 @@
 // Structure
 
 $base__space-unit: 1.5rem;
+$font__size: 1.25rem;
 
 
 
@@ -41,6 +42,8 @@ $fontface__main: 'exo', sans-serif;
 //border
 
 $border__dash: 1px dashed #ffffff;
+$border_button: solid 2px $color__link;
+
 
 
 

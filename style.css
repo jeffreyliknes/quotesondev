@@ -455,7 +455,8 @@ textarea {
   clear: both;
   display: block;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  width: 700px; }
 
 /*--------------------------------------------------------------
 # Clearings
@@ -531,7 +532,7 @@ html {
   padding: 5%; }
 
 a {
-  font-family: "exo", sans-serif;
+  font-family: 'exo', sans-serif;
   font-weight: 100;
   text-decoration: none;
   color: #0c0;
@@ -543,12 +544,12 @@ body {
   background-color: #222;
   color: #fff;
   font-family: "exo", sans-serif;
-  font-size: 1.25; }
+  font-size: 1.25rem; }
   body button {
     font-family: "exo", sans-serif; }
   body h1,
   body h2 {
-    font-weight: 400; }
+    font-weight: 300; }
 
 .site {
   max-width: 1080px;
@@ -564,7 +565,7 @@ button {
   text-shadow: none;
   padding: 7px 35px;
   border: solid 2px #0c0;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1.5; }
   @media (min-width: 1080px) {
     button {
@@ -577,8 +578,8 @@ button {
     -webkit-box-shadow: none;
             box-shadow: none;
     text-shadow: none;
-    border: solid 2px #009900;
-    font-size: 1.2rem;
+    border: solid 2px #0c0;
+    font-size: 1.25rem;
     line-height: 1.5; }
 
 .entry-content p {
@@ -609,8 +610,13 @@ button {
     font-style: italic; }
 
 .source a {
-  font-size: 1.25;
+  font-size: 1.25rem;
   font-weight: 300; }
+
+span {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.75; }
 
 .main-navigation {
   max-width: 1080px;
@@ -646,9 +652,10 @@ button {
 @media (min-width: 1080px) {
   .site {
     position: relative;
+    display: block;
     margin-right: auto;
     margin-left: auto;
-    width: 600px; }
+    width: 700px; }
     .site .fa-quote-left {
       color: #0c0;
       position: absolute;
@@ -687,3 +694,65 @@ button {
 
 .mr-smiley {
   width: 15px; }
+
+.page-template-default {
+  font-size: 1rem; }
+  .page-template-default p {
+    font-weight: 100; }
+
+form label {
+  font-size: 1rem;
+  font-weight: 100;
+  padding-bottom: 1rem; }
+
+form input[type='text'] {
+  background-color: #222;
+  border: solid 2px #0c0; }
+
+form textarea {
+  background-color: #222;
+  border: solid 2px #0c0;
+  height: 4.5rem; }
+
+form input[type='url'] {
+  background-color: #222;
+  border: solid 2px #0c0; }
+
+form input[type='submit'] {
+  border-radius: 3px;
+  color: #0c0;
+  background-color: #222;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+  padding: 7px 35px;
+  border: solid 2px #0c0;
+  font-size: 1.25rem;
+  line-height: 1.5; }
+  form input[type='submit']:hover {
+    border-radius: 3px;
+    color: #009900;
+    background-color: #222;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    text-shadow: none;
+    border: solid 2px #0c0;
+    font-size: 1.25rem;
+    line-height: 1.5; }
+
+.quote-submission-wrapper div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 2rem;
+  width: 60%; }
+
+.quote-submission-wrapper textarea {
+  width: 170%; }
+  @media (min-width: 1080px) {
+    .quote-submission-wrapper textarea {
+      width: 150%; } }

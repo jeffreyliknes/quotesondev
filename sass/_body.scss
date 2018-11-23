@@ -10,14 +10,14 @@ body {
   background-color: $color__background;
   color: $color__mainfont;
   font-family: $fontface__main;
-  font-size: 1.25;
-  
+  font-size: $font__size;
+
   button {
     font-family: $fontface__main;
   }
   h1,
   h2 {
-    font-weight: 400;
+    font-weight: 300;
   }
 }
 
@@ -32,13 +32,12 @@ button {
   box-shadow: none;
   text-shadow: none;
   padding: 7px 35px;
-  border: solid 2px $color__link;
-  font-size: 1.2rem;
+  border: $border_button;
+  font-size: $font__size;
   line-height: 1.5;
   @include desktop {
     position: relative;
     left: 30%;
-
   }
   &:hover {
     border-radius: 3px;
@@ -46,22 +45,22 @@ button {
     background-color: #222;
     box-shadow: none;
     text-shadow: none;
-    border: solid 2px darken($color__link, 10%);
-    font-size: 1.2rem;
+    border: $border_button;
+    font-size: $font__size;
     line-height: 1.5;
   }
 }
 
 .entry-content {
   p {
-    font-size: 1.25rem;
+    font-size: $font__size;
     font-weight: 100;
     padding-top: 1rem;
     @include tablet {
-        font-size: 1.75rem;
+      font-size: 1.75rem;
     }
     @include desktop {
-        font-size: 2.5rem;
+      font-size: 2.5rem;
     }
   }
 }
@@ -70,24 +69,28 @@ button {
   align-items: center;
   line-height: 1;
   margin-bottom: 3rem;
-  
+
   h2 {
     display: inline;
     margin: 0;
-    font-size: 1.25rem;
+    font-size: $font__size;
     font-weight: 300;
   }
   a {
     line-height: 1;
-    font-size: 1.25rem;
+    font-size: $font__size;
     font-style: italic;
   }
 }
 
 .source {
-    
-    a {
-        font-size: 1.25;
-        font-weight: 300;
-    }
+  a {
+    font-size: $font__size;
+    font-weight: 300;
+  }
+}
+span {
+  font-size: $font__size;
+  font-weight: 300;
+  line-height: 1.75;
 }

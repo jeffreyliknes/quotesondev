@@ -1,9 +1,15 @@
 // Center block
 @mixin center-block {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+}
 
+@mixin form {
+  
+  background-color: $color__background;
+  border: $border_button;
 }
 
 @mixin body {
@@ -19,7 +25,7 @@
 }
 
 @mixin anchor {
-  font-family: "exo", sans-serif;
+  font-family: 'exo', sans-serif;
   font-weight: 100;
   text-decoration: none;
   color: $color__link;
@@ -33,14 +39,12 @@ $tablet-width: 600px;
 
 $desktop-width: 1080px;
 
-
 @mixin tablet {
-    @media (min-width: $tablet-width) {
-      @content;
-    }
+  @media (min-width: $tablet-width) {
+    @content;
   }
+}
 
-  
 @mixin desktop {
   @media (min-width: $desktop-width) {
     @content;

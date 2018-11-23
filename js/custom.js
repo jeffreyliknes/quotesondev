@@ -28,13 +28,15 @@
           $(`.entry-content`).empty();
           $(`.entry-content`).append(data[0].content.rendered);
 
+
+          
           $(`.entry-title`).empty();
           $(`.entry-title`).text(data[0].title.rendered);
 
           $(`.source`).empty();
 
           if (data[0]._qod_quote_source_url.length > 0) {
-              console.log("working");
+            
             $(`.source`).append(`,<a href="${data[0]._qod_quote_source_url}">&nbsp;${data[0]._qod_quote_source}</a>`
             );
           }
@@ -44,8 +46,7 @@
             }
 
             const quote = data[0];
-            console.log(quote.slug);
-            // figure out the post slug
+           
 
             history.pushState(null, null, qod_vars.home_url + '/' + quote.slug);
 

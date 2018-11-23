@@ -5,9 +5,10 @@
 @include desktop {
   .site {
     position: relative;
+    display: block;
     margin-right: auto;
     margin-left: auto;
-    width: 600px;
+    width: 700px;
     .fa-quote-left {
       color: $color__link;
       position: absolute;
