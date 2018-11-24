@@ -28,13 +28,16 @@ body {
 button {
   border-radius: 3px;
   color: $color__link;
-  background-color: #222;
+  background-color: $color__background;
   box-shadow: none;
   text-shadow: none;
   padding: 7px 35px;
   border: $border_button;
   font-size: $font__size;
   line-height: 1.5;
+  &:focus {
+    outline: 0;
+  }
   @include desktop {
     position: relative;
     left: 30%;
@@ -42,10 +45,10 @@ button {
   &:hover {
     border-radius: 3px;
     color: darken($color__link, 10%);
-    background-color: #222;
+    background-color: $color__background;
     box-shadow: none;
     text-shadow: none;
-    border: $border_button;
+    border: 2px solid darken($color__link, 10%);
     font-size: $font__size;
     line-height: 1.5;
   }

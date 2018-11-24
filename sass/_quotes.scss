@@ -1,27 +1,39 @@
-.fa-quote-left {
+
+
+.fa-quote-left, .fa-quote-right {
   display: none;
 }
 
-@include desktop {
-  .site {
-    position: relative;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    width: 700px;
-    .fa-quote-left {
-      color: $color__link;
-      position: absolute;
-      font-size: 125px;
-      left: -230px;
-      top: 175px;
+   
+    @include desktop {
+      .site {
+        position: relative;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 700px;
+        .fa-quote-left {
+          display: block;
+          color: $color__link;
+          position: absolute;
+          font-size: 125px;
+          left: -200px;
+          top: 175px;
+         
+        }
+        .fa-quote-right {
+          display: block;
+          color: $color__link;
+          position: absolute;
+          right: -180px;
+          font-size: 125px;
+          top: 175px;
+        }
+      }
     }
-    .fa-quote-right {
-      color: $color__link;
-      position: absolute;
-      right: -230px;
-      font-size: 125px;
-      top: 175px;
-    }
-  }
-}
+  
+  
+
+
+
+

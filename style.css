@@ -224,7 +224,7 @@ th {
 @font-face {
   font-family: 'Exo';
   src: url("../../fonts/Exo-Light.eot");
-  src: url("../../fonts/fonts/Exo-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/fonts/Exo-Light.woff2") format("woff2"), url("../../fonts/Exo-Light.woff") format("woff"), url("../../fonts/Exo-Light.ttf") format("truetype"), url("../../fonts/Exo-Light.svg#Exo-Light") format("svg");
+  src: url("../../fonts/fonts/Exo-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-Light.woff") format("woff"), url("../../fonts/Exo-Light.ttf") format("truetype"), url("../../fonts/Exo-Light.svg#Exo-Light") format("svg");
   font-weight: 300;
   font-style: normal; }
 
@@ -309,72 +309,6 @@ html {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
-
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-/* Buttons */
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  font-size: .75rem;
-  line-height: 1;
-  padding: .6rem 1rem .4rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
-  button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
-  button:active, button:focus,
-  input[type="button"]:active,
-  input[type="button"]:focus,
-  input[type="reset"]:active,
-  input[type="reset"]:focus,
-  input[type="submit"]:active,
-  input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb;
-    -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
-
-/* Fields */
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px; }
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="url"]:focus,
-  input[type="password"]:focus,
-  input[type="search"]:focus,
-  textarea:focus {
-    color: #111; }
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
-  padding: 3px; }
-
-textarea {
-  padding-left: 3px;
-  width: 100%; }
 
 .main-navigation a {
   font-weight: 100; }
@@ -518,7 +452,8 @@ object {
   margin: 3rem 0 1rem 0; }
   .site-header img {
     width: 300px;
-    height: auto; }
+    height: auto;
+    padding-bottom: 2rem; }
     @media (min-width: 600px) {
       .site-header img {
         width: 500px; } }
@@ -567,6 +502,8 @@ button {
   border: solid 2px #0c0;
   font-size: 1.25rem;
   line-height: 1.5; }
+  button:focus {
+    outline: 0; }
   @media (min-width: 1080px) {
     button {
       position: relative;
@@ -578,7 +515,7 @@ button {
     -webkit-box-shadow: none;
             box-shadow: none;
     text-shadow: none;
-    border: solid 2px #0c0;
+    border: 2px solid #009900;
     font-size: 1.25rem;
     line-height: 1.5; }
 
@@ -646,7 +583,7 @@ span {
         .site-info .main-navigation p {
           padding-left: 1rem; } }
 
-.fa-quote-left {
+.fa-quote-left, .fa-quote-right {
   display: none; }
 
 @media (min-width: 1080px) {
@@ -657,21 +594,24 @@ span {
     margin-left: auto;
     width: 700px; }
     .site .fa-quote-left {
+      display: block;
       color: #0c0;
       position: absolute;
       font-size: 125px;
-      left: -230px;
+      left: -200px;
       top: 175px; }
     .site .fa-quote-right {
+      display: block;
       color: #0c0;
       position: absolute;
-      right: -230px;
+      right: -180px;
       font-size: 125px;
       top: 175px; } }
 
 .post-archives, .category-archives, .tag-archives {
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+  width: 700px; }
   .post-archives ul, .category-archives ul, .tag-archives ul {
     padding: 0;
     margin: 0;
@@ -707,16 +647,25 @@ form label {
 
 form input[type='text'] {
   background-color: #222;
-  border: solid 2px #0c0; }
+  border: solid 2px #0c0;
+  color: #fff; }
+  form input[type='text']:focus {
+    outline: 0; }
 
 form textarea {
   background-color: #222;
   border: solid 2px #0c0;
+  color: #fff;
   height: 4.5rem; }
+  form textarea:focus {
+    outline: 0; }
 
 form input[type='url'] {
   background-color: #222;
-  border: solid 2px #0c0; }
+  border: solid 2px #0c0;
+  color: #fff; }
+  form input[type='url']:focus {
+    outline: 0; }
 
 form input[type='submit'] {
   border-radius: 3px;
@@ -729,6 +678,8 @@ form input[type='submit'] {
   border: solid 2px #0c0;
   font-size: 1.25rem;
   line-height: 1.5; }
+  form input[type='submit']:focus {
+    outline: 0; }
   form input[type='submit']:hover {
     border-radius: 3px;
     color: #009900;
@@ -736,7 +687,7 @@ form input[type='submit'] {
     -webkit-box-shadow: none;
             box-shadow: none;
     text-shadow: none;
-    border: solid 2px #0c0;
+    border: 2px solid #009900;
     font-size: 1.25rem;
     line-height: 1.5; }
 
@@ -756,3 +707,34 @@ form input[type='submit'] {
   @media (min-width: 1080px) {
     .quote-submission-wrapper textarea {
       width: 150%; } }
+
+.error404 h1 {
+  font-size: 2rem; }
+
+.error404 p {
+  font-size: 1rem;
+  font-weight: 300; }
+
+.search-form input[type=search] {
+  background-color: #222;
+  border: solid 2px #0c0;
+  width: 35%;
+  padding: 1%;
+  border-radius: 3px; }
+  .search-form input[type=search]:focus {
+    outline: 0; }
+
+fieldset {
+  border: 0;
+  padding: 0; }
+
+button {
+  padding: 0;
+  border: none;
+  position: initial; }
+  button:hover {
+    padding: 0;
+    border: none; }
+
+label {
+  padding-right: 10px; }

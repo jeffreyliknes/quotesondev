@@ -1,0 +1,43 @@
+.error404 {
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+      font-size: 1rem;
+      font-weight: 300;
+  }
+}
+
+
+.search-form {
+    input[type=search] {
+        background-color: $color__background;
+        border: $border_button;
+        width: 35%;
+        padding: 1%;
+        border-radius: 3px;
+        &:focus {
+            outline: 0;
+        }
+    }
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+}
+
+button {
+    padding: 0;
+    border: none;
+    position: initial;
+    &:hover {
+        padding: 0;
+    border: none;
+    }
+}
+
+label {
+    padding-right: 10px;
+    
+}

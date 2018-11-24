@@ -23,29 +23,29 @@
       })
         .done(function(data) {
           // append content to the DOM
-          
+          const quote = data[0];
 
           $(`.entry-content`).empty();
-          $(`.entry-content`).append(data[0].content.rendered);
+          $(`.entry-content`).append(quote.content.rendered);
 
 
           
           $(`.entry-title`).empty();
-          $(`.entry-title`).text(data[0].title.rendered);
+          $(`.entry-title`).text(quote.title.rendered);
 
           $(`.source`).empty();
 
-          if (data[0]._qod_quote_source_url.length > 0) {
+          if (quote._qod_quote_source_url.length > 0) {
             
-            $(`.source`).append(`,<a href="${data[0]._qod_quote_source_url}">&nbsp;${data[0]._qod_quote_source}</a>`
+            $(`.source`).append(`,<a href="${quote._qod_quote_source_url}">&nbsp;${quote._qod_quote_source}</a>`
             );
           }
             else {
                 console.log("fail");
-                $(`.source`).append(data[0]._qod_quote_source);
+                $(`.source`).append(quote._qod_quote_source);
             }
 
-            const quote = data[0];
+            
            
 
             history.pushState(null, null, qod_vars.home_url + '/' + quote.slug);
@@ -109,7 +109,7 @@ $('#quote-submission-form').on('submit', function(event){
            
 
 //slide the form
-//append success message, thank you for submitting a quote
+//appends success message, thank you for submitting a quote
 
          }).fail(function(){
             console.log('something else');
