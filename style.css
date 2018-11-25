@@ -484,7 +484,7 @@ body {
     font-family: "exo", sans-serif; }
   body h1,
   body h2 {
-    font-weight: 300; }
+    font-weight: 500; }
 
 .site {
   max-width: 1080px;
@@ -522,7 +522,9 @@ button {
 .entry-content p {
   font-size: 1.25rem;
   font-weight: 100;
-  padding-top: 1rem; }
+  padding-top: 0;
+  padding-bottom: 2rem;
+  margin: 0; }
   @media (min-width: 600px) {
     .entry-content p {
       font-size: 1.75rem; } }
@@ -648,7 +650,8 @@ form label {
 form input[type='text'] {
   background-color: #222;
   border: solid 2px #0c0;
-  color: #fff; }
+  color: #fff;
+  border-radius: 3px; }
   form input[type='text']:focus {
     outline: 0; }
 
@@ -656,6 +659,7 @@ form textarea {
   background-color: #222;
   border: solid 2px #0c0;
   color: #fff;
+  border-radius: 3px;
   height: 4.5rem; }
   form textarea:focus {
     outline: 0; }
@@ -663,7 +667,8 @@ form textarea {
 form input[type='url'] {
   background-color: #222;
   border: solid 2px #0c0;
-  color: #fff; }
+  color: #fff;
+  border-radius: 3px; }
   form input[type='url']:focus {
     outline: 0; }
 
@@ -728,13 +733,18 @@ fieldset {
   border: 0;
   padding: 0; }
 
-button {
+.error404 button {
   padding: 0;
   border: none;
   position: initial; }
-  button:hover {
+  .error404 button:hover {
     padding: 0;
     border: none; }
 
 label {
   padding-right: 10px; }
+
+.search-results header {
+  font-size: 1rem; }
+  .search-results header span {
+    font-size: 1rem; }

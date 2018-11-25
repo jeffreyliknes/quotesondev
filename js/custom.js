@@ -24,14 +24,14 @@
         .done(function(data) {
           // append content to the DOM
           const quote = data[0];
-
+          
           $(`.entry-content`).empty();
           $(`.entry-content`).append(quote.content.rendered);
 
 
           
           $(`.entry-title`).empty();
-          $(`.entry-title`).text(quote.title.rendered);
+          $(`.entry-title`).text('— '+quote.title.rendered);
 
           $(`.source`).empty();
 
@@ -41,7 +41,7 @@
             );
           }
             else {
-                console.log("fail");
+               
                 $(`.source`).append(quote._qod_quote_source);
             }
 
@@ -112,7 +112,6 @@ $('#quote-submission-form').on('submit', function(event){
 //appends success message, thank you for submitting a quote
 
          }).fail(function(){
-            console.log('something else');
             $(".quote-submission").alert("Something went wrong, please try again")
 
 //output fail message

@@ -27,7 +27,8 @@ fieldset {
     padding: 0;
 }
 
-button {
+.error404 {
+  button {
     padding: 0;
     border: none;
     position: initial;
@@ -35,6 +36,8 @@ button {
         padding: 0;
     border: none;
     }
+}
+  
 }
 
 label {

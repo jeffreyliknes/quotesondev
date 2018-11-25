@@ -17,7 +17,7 @@ body {
   }
   h1,
   h2 {
-    font-weight: 300;
+    font-weight: 500;
   }
 }
 
@@ -58,7 +58,9 @@ button {
   p {
     font-size: $font__size;
     font-weight: 100;
-    padding-top: 1rem;
+    padding-top: 0;
+    padding-bottom: 2rem;
+    margin: 0;
     @include tablet {
       font-size: 1.75rem;
     }
@@ -97,3 +99,4 @@ span {
   font-weight: 300;
   line-height: 1.75;
 }
+
