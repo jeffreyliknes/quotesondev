@@ -1,19 +1,25 @@
-.post-archives, .category-archives, .tag-archives {
-  margin-right: auto;
-  margin-left: auto;
-  width: 700px;
+.post-archives,
+.category-archives,
+.tag-archives {
+  @include desktop {
+    margin-right: auto;
+    margin-left: auto;
+    width: 700px;
+  }
   ul {
     padding: 0;
     margin: 0;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    @include tablet {
+      font-size: 1.25rem;
+    }
     li {
       margin: 0 1rem (1rem/2) 0;
     }
   }
 }
-
 
 .archive {
   h1 {
@@ -25,5 +31,3 @@
     border-bottom: $border__dash;
   }
 }
-
-

@@ -1,23 +1,28 @@
-# Quotes on Dev Starter
 
-A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
+Quotes on Dev - Website that displays famous quotes and also allows user to submit quotes.
 
-## Installation
 
-### 1. Download me (don't clone me!)
 
-Then add me to your `wp-content/themes` directory.
 
-### 2. Rename the `quotesondev-starter-master` directory
 
-Make sure that the theme directory name is project appropriate! Do you need `starter` or `master` in the directory name?
 
-### 3. Install the dev dependencies
+Technologies used:
 
-Next you'll need to run `npm install` **inside your theme directory** to install the npm packages you'll need for Gulp, etc.
 
-### 4. Update the proxy in `gulpfile.js`
+Wordpress - Used custom theme to organize pages and posts.
 
-Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
+Javascript - Used AJAX to append new quotes to the website without refreshing (rest API). Also used in the form section to submit a Quote and have it pend in the 'Posts' page of WP.
 
-And now would be a good time to `git init` :)
+PHP/HTML - Used PHP functions for the backbone display of the website.
+
+Sass - Used to style website and include Mixins for organization.
+
+
+Fontawesome - Quote images found at: https://fontawesome.com/icons?d=gallery
+
+
+Learned:
+    Using the rest API is a great tool for the user. The inteneded use it to make the website feel seamless without refreshing. Also organization of Sass from the beginning is key to saving time later on in the project.
+
+- Jeff Liknes, Red Academy 2018
+

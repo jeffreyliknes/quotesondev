@@ -28,7 +28,7 @@
 
 @mixin anchor {
   font-family: 'exo', sans-serif;
-  font-weight: 100;
+  font-weight: $font__Hweight;
   text-decoration: none;
   color: $color__link;
   line-height: 1.5;
@@ -36,6 +36,13 @@
     color: darken($color__link, 10%);
   }
 }
+
+@mixin container-block {
+  max-width: 1080px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 
 $tablet-width: 600px;
 

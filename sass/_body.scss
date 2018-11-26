@@ -57,7 +57,7 @@ button {
 .entry-content {
   p {
     font-size: $font__size;
-    font-weight: 100;
+    font-weight: $font__Hweight;
     padding-top: 0;
     padding-bottom: 2rem;
     margin: 0;
@@ -79,7 +79,7 @@ button {
     display: inline;
     margin: 0;
     font-size: $font__size;
-    font-weight: 300;
+    font-weight: $font__Pweight;
   }
   a {
     line-height: 1;
@@ -91,12 +91,12 @@ button {
 .source {
   a {
     font-size: $font__size;
-    font-weight: 300;
+    font-weight: $font__Pweight;
   }
 }
 span {
   font-size: $font__size;
-  font-weight: 300;
+  font-weight: $font__Pweight;
   line-height: 1.75;
 }
 

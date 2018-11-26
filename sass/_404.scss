@@ -3,28 +3,27 @@
     font-size: 2rem;
   }
   p {
-      font-size: 1rem;
-      font-weight: 300;
+    font-size: 1rem;
+    font-weight: $font__Pweight;
   }
 }
 
-
 .search-form {
-    input[type=search] {
-        background-color: $color__background;
-        border: $border_button;
-        width: 35%;
-        padding: 1%;
-        border-radius: 3px;
-        &:focus {
-            outline: 0;
-        }
+  input[type='search'] {
+    background-color: $color__background;
+    border: $border_button;
+    width: 35%;
+    padding: 1%;
+    border-radius: 3px;
+    &:focus {
+      outline: 0;
     }
+  }
 }
 
 fieldset {
-    border: 0;
-    padding: 0;
+  border: 0;
+  padding: 0;
 }
 
 .error404 {
@@ -33,14 +32,12 @@ fieldset {
     border: none;
     position: initial;
     &:hover {
-        padding: 0;
-    border: none;
+      padding: 0;
+      border: none;
     }
-}
-  
+  }
 }
 
 label {
-    padding-right: 10px;
-    
+  padding-right: 10px;
 }

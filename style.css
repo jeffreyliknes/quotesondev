@@ -443,11 +443,6 @@ iframe,
 object {
   max-width: 100%; }
 
-/*--------------------------------------------------------------
-# Page Templates
---------------------------------------------------------------*/
-/* All Archives Page */
-/* Submit a Quote Page */
 .site-header {
   margin: 3rem 0 1rem 0; }
   .site-header img {
@@ -461,7 +456,7 @@ object {
       .site-header img {
         width: 700px;
         position: relative;
-        left: -50px; } }
+        left: -20px; } }
 
 html {
   padding: 5%; }
@@ -610,21 +605,34 @@ span {
       font-size: 125px;
       top: 175px; } }
 
-.post-archives, .category-archives, .tag-archives {
-  margin-right: auto;
-  margin-left: auto;
-  width: 700px; }
-  .post-archives ul, .category-archives ul, .tag-archives ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-    .post-archives ul li, .category-archives ul li, .tag-archives ul li {
-      margin: 0 1rem 0.5rem 0; }
+@media (min-width: 1080px) {
+  .post-archives,
+  .category-archives,
+  .tag-archives {
+    margin-right: auto;
+    margin-left: auto;
+    width: 700px; } }
+
+.post-archives ul,
+.category-archives ul,
+.tag-archives ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  @media (min-width: 600px) {
+    .post-archives ul,
+    .category-archives ul,
+    .tag-archives ul {
+      font-size: 1.25rem; } }
+  .post-archives ul li,
+  .category-archives ul li,
+  .tag-archives ul li {
+    margin: 0 1rem 0.5rem 0; }
 
 .archive h1 {
   border-bottom: 1px dashed #ffffff;
@@ -720,13 +728,13 @@ form input[type='submit'] {
   font-size: 1rem;
   font-weight: 300; }
 
-.search-form input[type=search] {
+.search-form input[type='search'] {
   background-color: #222;
   border: solid 2px #0c0;
   width: 35%;
   padding: 1%;
   border-radius: 3px; }
-  .search-form input[type=search]:focus {
+  .search-form input[type='search']:focus {
     outline: 0; }
 
 fieldset {
