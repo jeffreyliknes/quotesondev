@@ -11,17 +11,10 @@ $source_url = get_post_meta( get_the_ID(), '_qod_quote_source_url', true );
 
 // var_dump($source_url);
 
-
-
 ?>
-
-
-
-
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
-
 	<div class="entry-content">
 		
 	<?php the_content(); ?>
@@ -38,12 +31,8 @@ $source_url = get_post_meta( get_the_ID(), '_qod_quote_source_url', true );
 	<span class="source"></span>
 	<?php endif; ?>
 
-	
-
-
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
-
 
 <?php
 if( is_home() || is_single() ): ?>
